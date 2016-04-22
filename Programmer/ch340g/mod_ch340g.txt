@@ -1,0 +1,14 @@
+# avrdude.conf
+
+ch340g
+
+programmer
+  id    = "ch340g";
+  desc  = "ch340g serial, reset=!txd sck=!rts mosi=!dtr miso=!cts";
+  type  = "serbb";
+  connection_type = serial;
+  reset = ~3;
+  sck   = ~7;
+  mosi  = ~4;
+  miso  = ~8;
+;

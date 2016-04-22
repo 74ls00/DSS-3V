@@ -1,0 +1,6 @@
+for atmega168p
+avrdude.conf md5: 40572FBA3533483449EFAA84C7F9D74A
+
+Модификации конфига принимает с ошибками. 
+Заменил в m168 на 
+signature       = 0x1e 0x94 0x0b

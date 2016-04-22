@@ -1,0 +1,22 @@
+# avrdude.conf
+
+pl2303hx
+
+pin	sign	avr
+----------------
+2	dtr		mosi
+3	rts		sck
+11	cts		miso
+(1)	txd		reset
+	
+
+programmer
+  id    = "pl2303";
+  desc  = "pl2303 serial, reset=!txd sck=!rts mosi=!dtr miso=!cts";
+  type  = "serbb";
+  connection_type = serial;
+  reset = ~3;
+  sck   = ~7;
+  mosi  = ~4;
+  miso  = ~8;
+;
