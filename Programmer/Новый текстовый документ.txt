@@ -1,1 +1,0 @@
-G:\home\Documents\Projects\0-Electronics\DSS3\REL\Programmer\bin\ftbb\avrdude.exe -c ftbb -p 8535 -P ft0 -B 2400 -v
