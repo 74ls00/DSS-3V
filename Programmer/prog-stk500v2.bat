@@ -2,13 +2,13 @@
 chcp 1251
 rem в свойствах консоли изменить шрифт
 title -= avrdude STK500 AVR =-
-set port=com5
+set port=com7
+set mk=m168p
 rem set mk=m328p
-set mk=m328p
 
 set prog=stk500v2
 rem set fwn=Digital_Solder_Staton.hex
-set fwn=DSS31.hex
+set fwn=20160322\DSS32.hex
 set tdir=%~d0%~p0bin\
 set fw=%tdir%..\..\Firmware\%fwn%
 set lfuse=E2
@@ -56,7 +56,8 @@ pause
 cls
 goto menu
 :wflash
-%tdir%\avrdude.exe -p %mk% -P %port% -c %prog% -i 100 -U flash:w:%fw%:a
+%tdir%\avrdude.exe -p %mk% -P %port% -c %prog% -U flash:w:%fw%:a
+rem %tdir%\avrdude.exe -p %mk% -P %port% -c %prog% -i 100 -U flash:w:%fw%:a
 pause
 cls
 goto menu
@@ -64,23 +65,23 @@ goto menu
 echo Write fuses ?
 pause
 pause
-%tdir%\avrdude.exe -p %mk% -P %port% -c %prog% -B 4800 -i 500 -U lfuse:w:0x%lfuse%:m
-%tdir%\avrdude.exe -p %mk% -P %port% -c %prog% -B 4800 -i 500 -U hfuse:w:0x%hfuse%:m
+%tdir%\avrdude.exe -p %mk% -P %port% -c %prog% -U lfuse:w:0x%lfuse%:m
+%tdir%\avrdude.exe -p %mk% -P %port% -c %prog% -U hfuse:w:0x%hfuse%:m
 pause
 cls
 goto menu
 :rfuses
-%tdir%\avrdude.exe -p %mk% -P %port% -c %prog% -B 4800 -i 500 -U hfuse:r:"hfuse.hex":h -U lfuse:r:"lfuse.hex":h -U efuse:r:"efuse.hex":h
+%tdir%\avrdude.exe -p %mk% -P %port% -c %prog% -U hfuse:r:"hfuse.hex":h -U lfuse:r:"lfuse.hex":h -U efuse:r:"efuse.hex":h
 pause
 cls
 goto menu
 :rflash
-%tdir%\avrdude.exe -p %mk% -P %port% -c %prog% -B 4800 -i 100 -U flash:r:"read.hex":r
+%tdir%\avrdude.exe -p %mk% -P %port% -c %prog% -U flash:r:"read.hex":r
 pause
 cls
 goto menu
 :vflash
-%tdir%\avrdude.exe -p %mk% -P %port% -c %prog% -B 4800 -i 500 -U flash:v:"%fw%":a
+%tdir%\avrdude.exe -p %mk% -P %port% -c %prog% -U flash:v:"%fw%":a
 pause
 cls
 goto menu
@@ -88,7 +89,7 @@ goto menu
 echo Erase chip ?
 pause
 pause
-%tdir%\avrdude.exe -p %mk% -P %port% -c %prog% -B 4800 -i 500 -e
+%tdir%\avrdude.exe -p %mk% -P %port% -c %prog% -e
 pause
 cls
 goto menu

@@ -4,10 +4,15 @@
 git.txt
 DSS3V.wiki
 
-
+local
+old
 
 
 /DSS3V.wiki.zip
 /Firmware/20150107/bak.eep
 /Shema/dss3v_plata - копия.lay
 /Firmware/*.lnk
+/Firmware/20150107
+/Programmer/hfuse.hex
+/Programmer/lfuse.hex
+/Programmer/efuse.hex
