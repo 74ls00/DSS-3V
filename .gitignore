@@ -1,20 +1,16 @@
-~
-*.bak
-*.PWI
 git.txt
-DSS3V.wiki
-
+~
 local
 old
+DSS3V.wiki
 
-
-/DSS3V.wiki.zip
-/Firmware/20150107/bak.eep
+DSS3V.wiki.zip
 dss3v_plata - копия.lay
-*.lnk
-/Firmware/20150107
+
 hfuse.hex
 lfuse.hex
 efuse.hex
-AVRDUDEPROG.lnk
-/Firmware/20160322/DSS32-.hex
+
+*.bak
+*.lnk
+*.PWI
