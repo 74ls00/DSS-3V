@@ -10,9 +10,11 @@ old
 
 /DSS3V.wiki.zip
 /Firmware/20150107/bak.eep
-/Shema/dss3v_plata - копия.lay
-/Firmware/*.lnk
+dss3v_plata - копия.lay
+*.lnk
 /Firmware/20150107
-/Programmer/hfuse.hex
-/Programmer/lfuse.hex
-/Programmer/efuse.hex
+hfuse.hex
+lfuse.hex
+efuse.hex
+AVRDUDEPROG.lnk
+/Firmware/20160322/DSS32-.hex
